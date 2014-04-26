@@ -1,0 +1,15 @@
+[submodule "cookbooks/apt"]
+	path = cookbooks/apt
+	url = git://github.com/opscode-cookbooks/apt
+[submodule "cookbooks/java"]
+	path = cookbooks/java
+	url = git://github.com/socrata-cookbooks/java
+[submodule "cookbooks/mysql"]
+	path = cookbooks/mysql
+	url = git://github.com/opscode-cookbooks/mysql
+[submodule "cookbooks/sudo"]
+	path = cookbooks/sudo
+	url = git://github.com/opscode-cookbooks/sudo
+[submodule "cookbooks/tomcat"]
+	path = cookbooks/tomcat
+	url = git://github.com/opscode-cookbooks/tomcat
