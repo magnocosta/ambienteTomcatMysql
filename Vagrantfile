@@ -2,21 +2,20 @@
 # vi: set ft=ruby :
 
 VAGRANTFILE_API_VERSION = '2'
-#SYNCED_FOLDER = ENV['SYNCED_FOLDER'] || "~/app"
-
-# Vagrant.require_plugin 'vagrant-digitalocean'
-# Vagrant.require_plugin 'vagrant-omnibus'
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.omnibus.chef_version = :latest
     config.cache.auto_detect = true
     config.vm.host_name = 'app'
-    #config.vm.box = 'lucid32'
-
+    
     config.vm.provider :virtualbox do |vb, override|
         vb.customize ['modifyvm', :id, '--memory', '512']
         override.vm.box = 'lucid32'
         override.vm.box_url = 'http://files.vagrantup.com/lucid32.box'
+
+
+    config.vm.provider :virtualbox do |vb|
+        vb.customize ['modifyvm', :id, '--memory', '1024']
     end
 
     config.vm.provider :vmware_fusion do |v|
