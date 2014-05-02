@@ -13,3 +13,6 @@
 [submodule "cookbooks/tomcat"]
 	path = cookbooks/tomcat
 	url = git://github.com/opscode-cookbooks/tomcat
+[submodule "cookbooks/openssl"]
+	path = cookbooks/openssl
+	url = https://github.com/opscode-cookbooks/openssl
